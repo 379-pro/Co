@@ -1,759 +1,918 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>379 Joint Stock Company - Professional Construction & Material Supply</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com/3.4.16"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-tailwind.config = {
-theme: {
-extend: {
-colors: {
-primary: '#FF6B00',
-secondary: '#1A1A1A'
-},
-borderRadius: {
-'none': '0px',
-'sm': '4px',
-DEFAULT: '8px',
-'md': '12px',
-'lg': '16px',
-'xl': '20px',
-'2xl': '24px',
-'3xl': '32px',
-'full': '9999px',
-'button': '8px'
-}
-}
-}
-}
-</script>
-<style>
-:where([class^="ri-"])::before { content: "\f3c2"; }
-body {
-background-color: #1A1A1A;
-color: white;
-}
-.hero-section {
-background-image: linear-gradient(to right, rgba(26, 26, 26, 0.95), rgba(26, 26, 26, 0.7)), url('https://raw.githubusercontent.com/379-pro/Co/087109af53d299be83e234b465b18794a8a682e3/image.jpg');
-background-size: cover;
-background-position: center right;
-}
-.service-card:hover {
-transform: translateY(-5px);
-box-shadow: 0 10px 25px rgba(255, 107, 0, 0.2);
-}
-.pricing-card:hover {
-transform: translateY(-5px);
-box-shadow: 0 10px 25px rgba(255, 107, 0, 0.2);
-}
-.project-card {
-overflow: hidden;
-}
-.project-card img {
-transition: transform 0.5s ease;
-}
-.project-card:hover img {
-transform: scale(1.05);
-}
-.project-overlay {
-opacity: 0;
-transition: opacity 0.3s ease;
-}
-.project-card:hover .project-overlay {
-opacity: 1;
-}
-input:focus, textarea:focus {
-outline: 2px solid #FF6B00;
-}
-input[type="checkbox"] {
-appearance: none;
--webkit-appearance: none;
-width: 20px;
-height: 20px;
-border: 2px solid #FF6B00;
-border-radius: 4px;
-cursor: pointer;
-position: relative;
-}
-input[type="checkbox"]:checked {
-background-color: #FF6B00;
-}
-input[type="checkbox"]:checked::before {
-content: "✓";
-position: absolute;
-color: white;
-font-size: 14px;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CÔNG TY CỔ PHẦN 379 - Thi công công trình đường bộ & Vật liệu Chuyên nghiệp</title>
+  <meta name="description" content="CÔNG TY CỔ PHẦN 379 cung cấp dịch vụ xây dựng nhà ở, công trình công nghiệp, đường bộ, tư vấn giám sát và vật liệu xây dựng chất lượng cao tại Hưng Yên, Việt Nam.">
+  <meta name="keywords" content="xây dựng, vật liệu xây dựng, tư vấn giám sát, nhà ở, công trình công nghiệp, đường bộ, Hưng Yên, 379 JSC">
+  <meta name="author" content="CÔNG TY CỔ PHẦN 379">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#FF6B00',
+            secondary: '#1A1A1A'
+          },
+          borderRadius: {
+            'none': '0px',
+            'sm': '4px',
+            DEFAULT: '8px',
+            'md': '12px',
+            'lg': '16px',
+            'xl': '20px',
+            '2xl': '24px',
+            '3xl': '32px',
+            'full': '9999px',
+            'button': '8px'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    :where([class^="ri-"])::before { content: "\f3c2"; }
+    body {
+      background-color: #1A1A1A;
+      color: white;
+    }
+    .hero-section {
+      background-image: linear-gradient(to right, rgba(26, 26, 26, 0.95), rgba(26, 26, 26, 0.7)), url('https://raw.githubusercontent.com/379-pro/Co/087109af53d299be83e234b465b18794a8a682e3/image.jpg');
+      background-size: cover;
+      background-position: center right;
+    }
+    .service-card:hover, .pricing-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(255, 107, 0, 0.2);
+    }
+    .project-card {
+      overflow: hidden;
+    }
+    .project-card img {
+      transition: transform 0.5s ease;
+    }
+    .project-card:hover img {
+      transform: scale(1.05);
+    }
+    .project-overlay {
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .project-card:hover .project-overlay {
+      opacity: 1;
+    }
+    input:focus, textarea:focus {
+      outline: 2px solid #FF6B00;
+    }
+    input[type="checkbox"] {
+      appearance: none;
+      -webkit-appearance: none;
+      width: 20px;
+      height: 20px;
+      border: 2px solid #FF6B00;
+      border-radius: 4px;
+      cursor: pointer;
+      position: relative;
+    }
+    input[type="checkbox"]:checked {
+      background-color: #FF6B00;
+    }
+    input[type="checkbox"]:checked::before {
+      content: "✓";
+      position: absolute;
+      color: white;
+      font-size: 14px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .faq-item {
+      cursor: pointer;
+    }
+    .faq-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    .faq-item.active .faq-content {
+      max-height: 200px;
+    }
+  </style>
 </head>
 <body>
-<!-- Header Navigation -->
-<header class="fixed w-full bg-secondary z-50 shadow-lg">
-<div class="container mx-auto px-6 py-4">
-<div class="flex items-center justify-between">
-<div class="flex items-center">
-<a href="#" class="text-3xl font-['Pacifico'] text-white">379 JSC</a>
-</div>
-<nav class="hidden md:flex space-x-10">
-<a href="#" class="text-white hover:text-primary transition-colors">Home</a>
-<a href="#services" class="text-white hover:text-primary transition-colors">Services</a>
-<a href="#about" class="text-white hover:text-primary transition-colors">About Us</a>
-<a href="#projects" class="text-white hover:text-primary transition-colors">Projects</a>
-<a href="#contact" class="text-white hover:text-primary transition-colors">Contact</a>
-</nav>
-<div class="flex items-center">
-<a href="#contact" class="bg-primary text-white px-6 py-2 !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-all">Get Quote</a>
-<div class="md:hidden ml-4 w-10 h-10 flex items-center justify-center cursor-pointer">
-<i class="ri-menu-line ri-2x text-white"></i>
-</div>
-</div>
-</div>
-</div>
-</header>
-<!-- Hero Section -->
-<section class="hero-section min-h-screen flex items-center pt-20">
-<div class="container mx-auto px-6 w-full">
-<div class="flex flex-col md:flex-row items-center">
-<div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
-  <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">XÂY DỰNG CÔNG TRÌNH ĐƯỜNG BỘ - <span class="text-primary">Thi công xây dựng chuyên nghiệp</span></h1>
-  <div class="w-24 h-1 bg-primary mb-8"></div>
-  <p class="text-xl mb-10 text-gray-300 max-w-2xl leading-relaxed">We provide professional construction services and supply high-quality building materials, specializing in residential and non-residential construction, road works, and sanitary equipment.</p>
-  <div class="flex flex-wrap gap-12 mb-12">
-    <div class="text-center">
-      <p class="text-4xl font-bold text-primary">700K+</p>
-      <p class="text-lg text-gray-400">Projects Done</p>
+  <!-- Header Navigation -->
+  <header class="fixed w-full bg-secondary z-50 shadow-lg">
+    <div class="container mx-auto px-6 py-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center">
+          <a href="#" class="flex items-center">
+            <img src="https://via.placeholder.com/40" alt="Logo CÔNG TY 379" class="w-10 h-10 mr-2">
+            <span class="text-3xl font-['Pacifico'] text-white">CÔNG TY 379</span>
+          </a>
+        </div>
+        <nav class="hidden md:flex space-x-10">
+          <a href="#" class="text-white hover:text-primary transition-colors">Trang chủ</a>
+          <a href="#services" class="text-white hover:text-primary transition-colors">Dịch vụ</a>
+          <a href="#pricing" class="text-white hover:text-primary transition-colors">Gói dịch vụ</a>
+          <a href="#about" class="text-white hover:text-primary transition-colors">Giới thiệu</a>
+          <a href="#projects" class="text-white hover:text-primary transition-colors">Dự án</a>
+          <a href="#faqs" class="text-white hover:text-primary transition-colors">FAQs</a>
+          <a href="#contact" class="text-white hover:text-primary transition-colors">Liên hệ</a>
+        </nav>
+        <div class="flex items-center">
+          <a href="#contact" class="bg-primary text-white px-6 py-2 !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-all">Yêu cầu báo giá</a>
+          <div class="md:hidden ml-4 w-10 h-10 flex items-center justify-center cursor-pointer">
+            <i class="ri-menu-line ri-2x text-white"></i>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="text-center">
-      <p class="text-4xl font-bold text-primary">99K+</p>
-      <p class="text-lg text-gray-400">Happy Clients</p>
+  </header>
+  <!-- Hero Section -->
+  <section class="hero-section min-h-screen flex items-center pt-20">
+    <div class="container mx-auto px-6 w-full">
+      <div class="flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
+          <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">Xây dựng & <span class="text-primary">Vật liệu Chuyên nghiệp</span></h1>
+          <div class="w-24 h-1 bg-primary mb-8"></div>
+          <p class="text-xl mb-10 text-gray-300 max-w-2xl leading-relaxed">CÔNG TY CỔ PHẦN 379 cung cấp dịch vụ xây dựng nhà ở, công trình công nghiệp, đường bộ, tư vấn giám sát và cung ứng vật liệu xây dựng chất lượng cao tại Hưng Yên.</p>
+          <div class="flex flex-wrap gap-12 mb-12">
+            <div class="text-center">
+              <p class="text-4xl font-bold text-primary">100+</p>
+              <p class="text-lg text-gray-400">Dự án hoàn thành</p>
+            </div>
+            <div class="text-center">
+              <p class="text-4xl font-bold text-primary">95%</p>
+              <p class="text-lg text-gray-400">Khách hàng hài lòng</p>
+            </div>
+            <div class="text-center">
+              <p class="text-4xl font-bold text-primary">50+</p>
+              <p class="text-lg text-gray-400">Nhân viên kỹ thuật</p>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-4">
+            <a href="#contact" class="bg-primary text-white px-8 py-3 !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-all font-medium">Liên hệ ngay</a>
+            <a href="#services" class="border-2 border-white text-white px-8 py-3 !rounded-button whitespace-nowrap hover:border-primary hover:text-primary transition-all font-medium">Tìm hiểu thêm</a>
+          </div>
+        </div>
+        <div class="md:w-1/2">
+          <!-- Hero image is part of the background -->
+        </div>
+      </div>
     </div>
-    <div class="text-center">
-      <p class="text-4xl font-bold text-primary">800+</p>
-      <p class="text-lg text-gray-400">Team Members</p>
+  </section>
+  <!-- Services Section -->
+  <section id="services" class="py-20 bg-[#222222]">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Dịch vụ <span class="text-primary">Chuyên nghiệp</span></h2>
+        <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+        <p class="text-gray-300 max-w-2xl mx-auto">Chúng tôi cung cấp các dịch vụ xây dựng, tư vấn giám sát và cung ứng vật liệu xây dựng toàn diện, đảm bảo chất lượng và tiến độ cho mọi dự án.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div class="service-card bg-[#2A2A2A] p-8 rounded transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+          <div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-6">
+            <i class="ri-home-4-line ri-2x text-primary"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-4">Xây dựng nhà ở</h3>
+          <p class="text-gray-400 mb-6">Thi công nhà ở, biệt thự, chung cư với thiết kế hiện đại, đảm bảo chất lượng và độ bền lâu dài.</p>
+          <a href="#" class="text-primary flex items-center hover:underline">
+            Tìm hiểu thêm <i class="ri-arrow-right-line ml-2"></i>
+          </a>
+        </div>
+        <div class="service-card bg-[#2A2A2A] p-8 rounded transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+          <div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-6">
+            <i class="ri-building-2-line ri-2x text-primary"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-4">Xây dựng công trình công nghiệp</h3>
+          <p class="text-gray-400 mb-6">Thi công nhà xưởng, tòa nhà thương mại với công nghệ tiên tiến, đáp ứng mọi yêu cầu.</p>
+          <a href="#" class="text-primary flex items-center hover:underline">
+            Tìm hiểu thêm <i class="ri-arrow-right-line ml-2"></i>
+          </a>
+        </div>
+        <div class="service-card bg-[#2A2A2A] p-8 rounded transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+          <div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-6">
+            <i class="ri-roadster-line ri-2x text-primary"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-4">Xây dựng công trình đường bộ</h3>
+          <p class="text-gray-400 mb-6">Thi công đường bộ, cầu cống với độ bền cao, đảm bảo an toàn và tiến độ.</p>
+          <a href="#" class="text-primary flex items-center hover:underline">
+            Tìm hiểu thêm <i class="ri-arrow-right-line ml-2"></i>
+          </a>
+        </div>
+        <div class="service-card bg-[#2A2A2A] p-8 rounded transition-all duration-300" data-aos="fade-up" data-aos-delay="400">
+          <div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-6">
+            <i class="ri-store-line ri-2x text-primary"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-4">Cung cấp vật liệu xây dựng</h3>
+          <p class="text-gray-400 mb-6">Cung cấp vật liệu xây dựng, thiết bị vệ sinh, sơn, kính chất lượng cao cho mọi dự án.</p>
+          <a href="#" class="text-primary flex items-center hover:underline">
+            Tìm hiểu thêm <i class="ri-arrow-right-line ml-2"></i>
+          </a>
+        </div>
+        <div class="service-card bg-[#2A2A2A] p-8 rounded transition-all duration-300" data-aos="fade-up" data-aos-delay="500">
+          <div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-6">
+            <i class="ri-shopping-cart-line ri-2x text-primary"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-4">Bán lẻ thiết bị xây dựng</h3>
+          <p class="text-gray-400 mb-6">Bán lẻ đồ ngũ kim, sơn, kính và thiết bị lắp đặt trong các cửa hàng chuyên doanh.</p>
+          <a href="#" class="text-primary flex items-center hover:underline">
+            Tìm hiểu thêm <i class="ri-arrow-right-line ml-2"></i>
+          </a>
+        </div>
+        <div class="service-card bg-[#2A2A2A] p-8 rounded transition-all duration-300" data-aos="fade-up" data-aos-delay="600">
+          <div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-6">
+            <i class="ri-eye-line ri-2x text-primary"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-4">Tư vấn giám sát thi công</h3>
+          <p class="text-gray-400 mb-6">Giám sát chất lượng, tiến độ và chi phí thi công công trình dân dụng, công nghiệp, giao thông.</p>
+          <a href="#" class="text-primary flex items-center hover:underline">
+            Tìm hiểu thêm <i class="ri-arrow-right-line ml-2"></i>
+          </a>
+        </div>
+      </div>
+      <div class="text-center">
+        <a href="#" class="bg-primary text-white px-8 py-3 !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-all font-medium">Xem tất cả dịch vụ</a>
+      </div>
     </div>
-  </div>
-  <div class="flex flex-wrap gap-4">
-    <a href="#contact" class="bg-primary text-white px-8 py-3 !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-all font-medium">Get Service</a>
-    <a href="#services" class="border-2 border-white text-white px-8 py-3 !rounded-button whitespace-nowrap hover:border-primary hover:text-primary transition-all font-medium">Learn More</a>
-  </div>
-</div>
-<div class="md:w-1/2">
-<!-- Hero image is part of the background -->
-</div>
-</div>
-</div>
-</section>
-<!-- Services Section -->
-<section id="services" class="py-20 bg-[#222222]">
-<div class="container mx-auto px-6">
-<div class="text-center mb-16">
-<h2 class="text-3xl md:text-4xl font-bold mb-4">Our <span class="text-primary">Professional Services</span></h2>
-<div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
-<p class="text-gray-300 max-w-2xl mx-auto">We offer comprehensive construction services and supply premium building materials and sanitary equipment to ensure your projects are completed to the highest standards.</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-<!-- Service Card 1 -->
-<div class="service-card bg-[#2A2A2A] p-8 rounded transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
-<div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-6">
-<i class="ri-home-4-line ri-2x text-primary"></i>
-</div>
-<h3 class="text-xl font-bold mb-4">Residential Construction</h3>
-<p class="text-gray-400 mb-6">Expert construction of residential buildings, ensuring quality and durability for your dream home.</p>
-<a href="#" class="text-primary flex items-center hover:underline">
-Learn More <i class="ri-arrow-right-line ml-2"></i>
-</a>
-</div>
-<!-- Service Card 2 -->
-<div class="service-card bg-[#2A2A2A] p-8 rounded transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
-<div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-6">
-<i class="ri-building-2-line ri-2x text-primary"></i>
-</div>
-<h3 class="text-xl font-bold mb-4">Non-Residential Construction</h3>
-<p class="text-gray-400 mb-6">Professional construction services for commercial and industrial buildings, tailored to your needs.</p>
-<a href="#" class="text-primary flex items-center hover:underline">
-Learn More <i class="ri-arrow-right-line ml-2"></i>
-</a>
-</div>
-<!-- Service Card 3 -->
-<div class="service-card bg-[#2A2A2A] p-8 rounded transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
-<div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-6">
-<i class="ri-store-line ri-2x text-primary"></i>
-</div>
-<h3 class="text-xl font-bold mb-4">Building Material Supply</h3>
-<p class="text-gray-400 mb-6">High-quality building materials and sanitary equipment for all your construction needs.</p>
-<a href="#" class="text-primary flex items-center hover:underline">
-Learn More <i class="ri-arrow-right-line ml-2"></i>
-</a>
-</div>
-</div>
-<div class="text-center">
-<a href="#" class="bg-primary text-white px-8 py-3 !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-all font-medium">See All Services</a>
-</div>
-</div>
-</section>
-<!-- Why Choose Us Section -->
-<section id="about" class="py-20 bg-[#1A1A1A]">
-<div class="container mx-auto px-6">
-<div class="flex flex-col md:flex-row items-center">
-<div class="md:w-1/2 mb-10 md:mb-0">
-<img src="https://readdy.ai/api/search-image?query=professional%20home%20repair%20worker%20in%20uniform%20working%20on%20a%20house%20repair%2C%20dark%20background%20with%20subtle%20lighting%2C%20high%20quality%20professional%20photo%2C%20realistic%2C%20showing%20skilled%20worker%20in%20action&width=600&height=600&seq=2&orientation=squarish" alt="Professional construction worker" class="rounded-lg shadow-2xl object-cover object-top w-full h-[500px]">
-</div>
-<div class="md:w-1/2 md:pl-12">
-<h2 class="text-3xl md:text-4xl font-bold mb-4">Why <span class="text-primary">Choose</span> Us</h2>
-<div class="w-20 h-1 bg-primary mb-6"></div>
-<p class="text-gray-300 mb-8">With extensive experience in construction and material supply, our team delivers exceptional quality and reliability for all your project needs.</p>
-<div class="grid grid-cols-2 gap-6 mb-8">
-<div class="flex items-start">
-<div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4">
-<i class="ri-shield-check-line ri-lg text-primary"></i>
-</div>
-<div>
-<h3 class="font-bold mb-2">Licensed & Insured</h3>
-<p class="text-gray-400 text-sm">Fully certified professionals you can trust</p>
-</div>
-</div>
-<div class="flex items-start">
-<div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4">
-<i class="ri-time-line ri-lg text-primary"></i>
-</div>
-<div>
-<h3 class="font-bold mb-2">On-Time Service</h3>
-<p class="text-gray-400 text-sm">We value your time and always deliver promptly</p>
-</div>
-</div>
-<div class="flex items-start">
-<div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4">
-<i class="ri-price-tag-3-line ri-lg text-primary"></i>
-</div>
-<div>
-<h3 class="font-bold mb-2">Competitive Pricing</h3>
-<p class="text-gray-400 text-sm">Transparent quotes with no hidden fees</p>
-</div>
-</div>
-<div class="flex items-start">
-<div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4">
-<i class="ri-customer-service-2-line ri-lg text-primary"></i>
-</div>
-<div>
-<h3 class="font-bold mb-2">24/7 Support</h3>
-<p class="text-gray-400 text-sm">Available for project consultations anytime</p>
-</div>
-</div>
-</div>
-<div class="flex flex-wrap gap-8 mb-8">
-<div class="text-center">
-<p class="text-3xl font-bold text-primary">10+</p>
-<p class="text-gray-400 text-sm">Years Experience</p>
-</div>
-<div class="text-center">
-<p class="text-3xl font-bold text-primary">95%</p>
-<p class="text-gray-400 text-sm">Client Satisfaction</p>
-</div>
-<div class="text-center">
-<p class="text-3xl font-bold text-primary">1000+</p>
-<p class="text-gray-400 text-sm">Projects Completed</p>
-</div>
-</div>
-<a href="#contact" class="bg-primary text-white px-8 py-3 !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-all font-medium inline-block">Get Free Estimate</a>
-</div>
-</div>
-</div>
-</section>
-<!-- Recent Projects Section -->
-<section id="projects" class="py-20 bg-[#222222]">
-<div class="container mx-auto px-6">
-<div class="text-center mb-16">
-<h2 class="text-3xl md:text-4xl font-bold mb-4">Recent <span class="text-primary">Projects</span></h2>
-<div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
-<p class="text-gray-300 max-w-2xl mx-auto">Explore our recent construction and renovation projects showcasing our expertise in quality workmanship and material supply.</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-<!-- Project Card 1 -->
-<div class="project-card bg-[#2A2A2A] rounded overflow-hidden relative" data-aos="zoom-in" data-aos-delay="100">
-<img src="https://readdy.ai/api/search-image?query=modern%20kitchen%20renovation%2C%20before%20and%20after%20comparison%2C%20dark%20elegant%20design%2C%20high%20quality%20professional%20photo%2C%20realistic&width=400&height=300&seq=3&orientation=landscape" alt="Residential Construction" class="w-full h-64 object-cover object-top">
-<div class="project-overlay absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-end p-6">
-<h3 class="text-xl font-bold mb-2">Residential Construction</h3>
-<p class="text-gray-300 mb-2">Modern home built with premium materials</p>
-<p class="text-primary mb-4">Completed in 4 months</p>
-<a href="#" class="text-white flex items-center hover:text-primary transition-colors">
-View Details <i class="ri-arrow-right-line ml-2"></i>
-</a>
-</div>
-</div>
-<!-- Project Card 2 -->
-<div class="project-card bg-[#2A2A2A] rounded overflow-hidden relative" data-aos="zoom-in" data-aos-delay="100">
-<img src="https://readdy.ai/api/search-image?query=bathroom%20remodeling%2C%20before%20and%20after%20comparison%2C%20modern%20elegant%20design%20with%20dark%20accents%2C%20high%20quality%20professional%20photo%2C%20realistic&width=400&height=300&seq=4&orientation=landscape" alt="Commercial Construction" class="w-full h-64 object-cover object-top">
-<div class="project-overlay absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-end p-6">
-<h3 class="text-xl font-bold mb-2">Commercial Construction</h3>
-<p class="text-gray-300 mb-2">Office building with advanced infrastructure</p>
-<p class="text-primary mb-4">Completed in 6 months</p>
-<a href="#" class="text-white flex items-center hover:text-primary transition-colors">
-View Details <i class="ri-arrow-right-line ml-2"></i>
-</a>
-</div>
-</div>
-<!-- Project Card 3 -->
-<div class="project-card bg-[#2A2A2A] rounded overflow-hidden relative" data-aos="zoom-in" data-aos-delay="100">
-<img src="https://readdy.ai/api/search-image?query=electrical%20system%20upgrade%20in%20home%2C%20before%20and%20after%20comparison%2C%20professional%20installation%2C%20high%20quality%20professional%20photo%2C%20realistic&width=400&height=300&seq=5&orientation=landscape" alt="Road Construction" class="w-full h-64 object-cover object-top">
-<div class="project-overlay absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-end p-6">
-<h3 class="text-xl font-bold mb-2">Road Construction</h3>
-<p class="text-gray-300 mb-2">Highway expansion with durable materials</p>
-<p class="text-primary mb-4">Completed in 3 months</p>
-<a href="#" class="text-white flex items-center hover:text-primary transition-colors">
-View Details <i class="ri-arrow-right-line ml-2"></i>
-</a>
-</div>
-</div>
-<!-- Project Card 4 -->
-<div class="project-card bg-[#2A2A2A] rounded overflow-hidden relative" data-aos="zoom-in" data-aos-delay="100">
-<img src="https://readdy.ai/api/search-image?query=plumbing%20repair%20in%20home%2C%20before%20and%20after%20comparison%2C%20professional%20installation%20of%20new%20pipes%2C%20high%20quality%20professional%20photo%2C%20realistic&width=400&height=300&seq=6&orientation=landscape" alt="Sanitary Equipment Installation" class="w-full h-64 object-cover object-top">
-<div class="project-overlay absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-end p-6">
-<h3 class="text-xl font-bold mb-2">Sanitary Equipment Installation</h3>
-<p class="text-gray-300 mb-2">Premium sanitary systems for modern homes</p>
-<p class="text-primary mb-4">Completed in 2 weeks</p>
-<a href="#" class="text-white flex items-center hover:text-primary transition-colors">
-View Details <i class="ri-arrow-right-line ml-2"></i>
-</a>
-</div>
-</div>
-<!-- Project Card 5 -->
-<div class="project-card bg-[#2A2A2A] rounded overflow-hidden relative" data-aos="zoom-in" data-aos-delay="100">
-<img src="https://readdy.ai/api/search-image?query=wooden%20deck%20construction%2C%20before%20and%20after%20comparison%2C%20beautiful%20outdoor%20space%2C%20high%20quality%20professional%20photo%2C%20realistic&width=400&height=300&seq=7&orientation=landscape" alt="Material Supply" class="w-full h-64 object-cover object-top">
-<div class="project-overlay absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-end p-6">
-<h3 class="text-xl font-bold mb-2">Building Material Supply</h3>
-<p class="text-gray-300 mb-2">High-quality materials for construction projects</p>
-<p class="text-primary mb-4">Delivered in 3 days</p>
-<a href="#" class="text-white flex items-center hover:text-primary transition-colors">
-View Details <i class="ri-arrow-right-line ml-2"></i>
-</a>
-</div>
-</div>
-<!-- Project Card 6 -->
-<div class="project-card bg-[#2A2A2A] rounded overflow-hidden relative" data-aos="zoom-in" data-aos-delay="100">
-<img src="https://readdy.ai/api/search-image?query=home%20exterior%20painting%2C%20before%20and%20after%20comparison%2C%20dramatic%20transformation%2C%20high%20quality%20professional%20photo%2C%20realistic&width=400&height=300&seq=8&orientation=landscape" alt="Infrastructure Project" class="w-full h-64 object-cover object-top">
-<div class="project-overlay absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-end p-6">
-<h3 class="text-xl font-bold mb-2">Infrastructure Project</h3>
-<p class="text-gray-300 mb-2">Utility system installation for urban development</p>
-<p class="text-primary mb-4">Completed in 5 weeks</p>
-<a href="#" class="text-white flex items-center hover:text-primary transition-colors">
-View Details <i class="ri-arrow-right-line ml-2"></i>
-</a>
-</div>
-</div>
-</div>
-<div class="text-center">
-<a href="#" class="bg-primary text-white px-8 py-3 !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-all font-medium">View All Projects</a>
-</div>
-</div>
-</section>
-<!-- Testimonials Section -->
-<section class="py-20 bg-[#222222]">
-<div class="container mx-auto px-6">
-<div class="text-center mb-16">
-<h2 class="text-3xl md:text-4xl font-bold mb-4">What Our <span class="text-primary">Clients</span> Say</h2>
-<div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
-<p class="text-gray-300 max-w-2xl mx-auto">Hear from our satisfied clients about their experience with our construction and material supply services.</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<!-- Testimonial 1 -->
-<div class="bg-[#2A2A2A] p-8 rounded relative" data-aos="fade-up" data-aos-delay="100">
-<div class="text-primary text-4xl absolute -top-5 left-8">"</div>
-<p class="text-gray-300 mb-6 pt-4">The team delivered our residential project on time with exceptional quality. The materials supplied were top-notch, making our home both beautiful and durable.</p>
-<div class="flex items-center">
-<div class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center mr-4">
-<i class="ri-user-line text-white"></i>
-</div>
-<div>
-<h4 class="font-bold">Nguyen Van A</h4>
-<p class="text-gray-400 text-sm">Residential Construction</p>
-</div>
-</div>
-<div class="flex text-primary mt-4">
-<i class="ri-star-fill"></i>
-<i class="ri-star-fill"></i>
-<i class="ri-star-fill"></i>
-<i class="ri-star-fill"></i>
-<i class="ri-star-fill"></i>
-</div>
-</div>
-<!-- Testimonial 2 -->
-<div class="bg-[#2A2A2A] p-8 rounded relative" data-aos="fade-up" data-aos-delay="100">
-<div class="text-primary text-4xl absolute -top-5 left-8">"</div>
-<p class="text-gray-300 mb-6 pt-4">Their material supply service was seamless, providing us with high-quality sanitary equipment that perfectly suited our project needs.</p>
-<div class="flex items-center">
-<div class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center mr-4">
-<i class="ri-user-line text-white"></i>
-</div>
-<div>
-<h4 class="font-bold">Tran Thi B</h4>
-<p class="text-gray-400 text-sm">Sanitary Equipment Supply</p>
-</div>
-</div>
-<div class="flex text-primary mt-4">
-<i class="ri-star-fill"></i>
-<i class="ri-star-fill"></i>
-<i class="ri-star-fill"></i>
-<i class="ri-star-fill"></i>
-<i class="ri-star-fill"></i>
-</div>
-</div>
-<!-- Testimonial 3 -->
-<div class="bg-[#2A2A2A] p-8 rounded relative" data-aos="fade-up" data-aos-delay="100">
-<div class="text-primary text-4xl absolute -top-5 left-8">"</div>
-<p class="text-gray-300 mb-6 pt-4">We trusted them for our commercial construction project, and they exceeded expectations with their professionalism and timely delivery.</p>
-<div class="flex items-center">
-<div class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center mr-4">
-<i class="ri-user-line text-white"></i>
-</div>
-<div>
-<h4 class="font-bold">Le Van C</h4>
-<p class="text-gray-400 text-sm">Commercial Construction</p>
-</div>
-</div>
-<div class="flex text-primary mt-4">
-<i class="ri-star-fill"></i>
-<i class="ri-star-fill"></i>
-<i class="ri-star-fill"></i>
-<i class="ri-star-fill"></i>
-<i class="ri-star-half-fill"></i>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Contact Section -->
-<section id="contact" class="py-20 bg-[#1A1A1A]">
-<div class="container mx-auto px-6">
-<div class="flex flex-col md:flex-row">
-<div class="md:w-1/2 mb-12 md:mb-0" data-aos="fade-right">
-<h2 class="text-3xl md:text-4xl font-bold mb-4">Get In <span class="text-primary">Touch</span></h2>
-<div class="w-20 h-1 bg-primary mb-6"></div>
-<p class="text-gray-300 mb-8 max-w-lg">Contact us today for a free consultation and estimate for your construction or material supply needs.</p>
-<div class="space-y-6 mb-8">
-<div class="flex items-start">
-<div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4">
-<i class="ri-map-pin-line text-primary"></i>
-</div>
-<div>
-<h3 class="font-bold mb-1">Our Location</h3>
-<p class="text-gray-400">Tổ Dân Phố Nhân Dục, Phường Phố Hiến, Hưng Yên, Vietnam</p>
-</div>
-</div>
-<div class="flex items-start">
-<div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4">
-<i class="ri-phone-line text-primary"></i>
-</div>
-<div>
-<h3 class="font-bold mb-1">Call Us</h3>
-<p class="text-gray-400">0973 480 488</p>
-</div>
-</div>
-<div class="flex items-start">
-<div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4">
-<i class="ri-mail-line text-primary"></i>
-</div>
-<div>
-<h3 class="font-bold mb-1">Email Us</h3>
-<p class="text-gray-400">company379.pro@gmail.com</p>
-</div>
-</div>
-<div class="flex items-start">
-<div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4">
-<i class="ri-time-line text-primary"></i>
-</div>
-<div>
-<h3 class="font-bold mb-1">Working Hours</h3>
-<p class="text-gray-400">Monday-Friday: 8am-6pm<br>Saturday: 9am-4pm<br>Sunday: Closed</p>
-</div>
-</div>
-</div>
-<div class="flex space-x-4">
-<a href="#" class="w-10 h-10 flex items-center justify-center bg-[#2A2A2A] rounded-full hover:bg-primary transition-colors">
-<i class="ri-facebook-fill text-white"></i>
-</a>
-<a href="#" class="w-10 h-10 flex items-center justify-center bg-[#2A2A2A] rounded-full hover:bg-primary transition-colors">
-<i class="ri-instagram-line text-white"></i>
-</a>
-<a href="#" class="w-10 h-10 flex items-center justify-center bg-[#2A2A2A] rounded-full hover:bg-primary transition-colors">
-<i class="ri-twitter-x-line text-white"></i>
-</a>
-<a href="#" class="w-10 h-10 flex items-center justify-center bg-[#2A2A2A] rounded-full hover:bg-primary transition-colors">
-<i class="ri-linkedin-fill text-white"></i>
-</a>
-</div>
-</div>
-<div class="md:w-1/2" data-aos="fade-left">
-<div class="bg-[#2A2A2A] p-8 rounded">
-<h3 class="text-2xl font-bold mb-6">Request a Free Estimate</h3>
-<form>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-<div>
-<label for="name" class="block text-gray-300 mb-2">Full Name</label>
-<input type="text" id="name" class="w-full bg-[#333333] border-none text-white p-3 rounded" placeholder="Nguyen Van A">
-</div>
-<div>
-<label for="email" class="block text-gray-300 mb-2">Email Address</label>
-<input type="email" id="email" class="w-full bg-[#333333] border-none text-white p-3 rounded" placeholder="example@company379.pro">
-</div>
-<div>
-<label for="phone" class="block text-gray-300 mb-2">Phone Number</label>
-<input type="tel" id="phone" class="w-full bg-[#333333] border-none text-white p-3 rounded" placeholder="0973 480 488">
-</div>
-<div>
-<label for="service" class="block text-gray-300 mb-2">Service Needed</label>
-<div class="relative">
-<select id="service" class="w-full bg-[#333333] border-none text-white p-3 rounded appearance-none pr-8">
-<option value="">Select a service</option>
-<option value="residential-construction">Residential Construction</option>
-<option value="non-residential-construction">Non-Residential Construction</option>
-<option value="road-construction">Road Construction</option>
-<option value="material-supply">Building Material Supply</option>
-<option value="sanitary-equipment">Sanitary Equipment Supply</option>
-<option value="other">Other</option>
-</select>
-<div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
-<i class="ri-arrow-down-s-line text-gray-400"></i>
-</div>
-</div>
-</div>
-</div>
-<div class="mb-6">
-<label for="message" class="block text-gray-300 mb-2">Project Details</label>
-<textarea id="message" rows="5" class="w-full bg-[#333333] border-none text-white p-3 rounded" placeholder="Please describe your project or material needs..."></textarea>
-</div>
-<div class="mb-6">
-<label class="flex items-center">
-<input type="checkbox" class="mr-3">
-<span class="text-gray-300 text-sm">I agree to the <a href="#" class="text-primary hover:underline">terms and conditions</a> and <a href="#" class="text-primary hover:underline">privacy policy</a>.</span>
-</label>
-</div>
-<button type="submit" class="bg-primary text-white px-8 py-3 !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-all font-medium w-full">Submit Request</button>
-</form>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Trust Badges Section -->
-<section class="py-12 bg-[#222222]">
-<div class="container mx-auto px-6">
-<div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
-<div class="text-center">
-<div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mx-auto mb-2">
-<i class="ri-shield-check-line ri-2x text-primary"></i>
-</div>
-<p class="text-gray-300 font-bold">Licensed & Insured</p>
-</div>
-<div class="text-center">
-<div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mx-auto mb-2">
-<i class="ri-medal-line ri-2x text-primary"></i>
-</div>
-<p class="text-gray-300 font-bold">10+ Years Experience</p>
-</div>
-<div class="text-center">
-<div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mx-auto mb-2">
-<i class="ri-thumb-up-line ri-2x text-primary"></i>
-</div>
-<p class="text-gray-300 font-bold">95% Satisfaction Rate</p>
-</div>
-<div class="text-center">
-<div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mx-auto mb-2">
-<i class="ri-24-hours-line ri-2x text-primary"></i>
-</div>
-<p class="text-gray-300 font-bold">24/7 Support</p>
-</div>
-<div class="text-center">
-<div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mx-auto mb-2">
-<i class="ri-wallet-3-line ri-2x text-primary"></i>
-</div>
-<p class="text-gray-300 font-bold">Competitive Pricing</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Footer -->
-<footer class="bg-[#1A1A1A] pt-16 pb-8">
-<div class="container mx-auto px-6">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-<div>
-<a href="#" class="text-3xl font-['Pacifico'] text-white mb-4 inline-block">379 JSC</a>
-<p class="text-gray-400 mb-6">Your trusted partner for professional construction and building material supply services in Hưng Yên, Vietnam.</p>
-<div class="flex space-x-4">
-<a href="#" class="w-10 h-10 flex items-center justify-center bg-[#2A2A2A] rounded-full hover:bg-primary transition-colors">
-<i class="ri-facebook-fill text-white"></i>
-</a>
-<a href="#" class="w-10 h-10 flex items-center justify-center bg-[#2A2A2A] rounded-full hover:bg-primary transition-colors">
-<i class="ri-instagram-line text-white"></i>
-</a>
-<a href="#" class="w-10 h-10 flex items-center justify-center bg-[#2A2A2A] rounded-full hover:bg-primary transition-colors">
-<i class="ri-twitter-x-line text-white"></i>
-</a>
-<a href="#" class="w-10 h-10 flex items-center justify-center bg-[#2A2A2A] rounded-full hover:bg-primary transition-colors">
-<i class="ri-linkedin-fill text-white"></i>
-</a>
-</div>
-</div>
-<div>
-<h4 class="text-xl font-bold mb-6">Our Services</h4>
-<ul class="space-y-3">
-<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Residential Construction</a></li>
-<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Non-Residential Construction</a></li>
-<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Road Construction</a></li>
-<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Building Material Supply</a></li>
-<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Sanitary Equipment Supply</a></li>
-<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Logistics & Transport</a></li>
-</ul>
-</div>
-<div>
-<h4 class="text-xl font-bold mb-6">Quick Links</h4>
-<ul class="space-y-3">
-<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">About Us</a></li>
-<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Our Projects</a></li>
-<li><a href="#" analytical report: 379 Joint Stock Company
-<h4 class="text-gray-400 hover:text-primary transition-colors">Pricing Packages</a></li>
-<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Testimonials</a></li>
-<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">FAQs</a></li>
-<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Contact Us</a></li>
-</ul>
-</div>
-<div>
-<h4 class="text-xl font-bold mb-6">Contact Info</h4>
-<ul class="space-y-4">
-<li class="flex items-start">
-<div class="w-10 h-10 flex items-center justify-center bg-[#2A2A2A] rounded-full mr-3">
-<i class="ri-map-pin-line text-primary"></i>
-</div>
-<span class="text-gray-400">Tổ Dân Phố Nhân Dục, Phường Phố Hiến, Hưng Yên, Vietnam</span>
-</li>
-<li class="flex items-start">
-<div class="w-10 h-10 flex items-center justify-center bg-[#2A2A2A] rounded-full mr-3">
-<i class="ri-phone-line text-primary"></i>
-</div>
-<span class="text-gray-400">0973 480 488</span>
-</li>
-<li class="flex items-start">
-<div class="w-10 h-10 flex items-center justify-center bg-[#2A2A2A] rounded-full mr-3">
-<i class="ri-mail-line text-primary"></i>
-</div>
-<span class="text-gray-400">company379.pro@gmail.com</span>
-</li>
-<li class="flex items-start">
-<div class="w-10 h-10 flex items-center justify-center bg-[#2A2A2A] rounded-full mr-3">
-<i class="ri-time-line text-primary"></i>
-</div>
-<span class="text-gray-400">Mon-Fri: 8am-6pm<br>Sat: 9am-4pm</span>
-</li>
-</ul>
-</div>
-</div>
-<div class="border-t border-gray-800 pt-8">
-<div class="flex flex-col md:flex-row justify-between items-center">
-<p class="text-gray-500 mb-4 md:mb-0">© 2025 379 Joint Stock Company. All rights reserved.</p>
-<div class="flex space-x-6">
-<a href="#" class="text-gray-500 hover:text-primary transition-colors">Privacy Policy</a>
-<a href="#" class="text-gray-500 hover:text-primary transition-colors">Terms of Service</a>
-<a href="#" class="text-gray-500 hover:text-primary transition-colors">Cookie Policy</a>
-</div>
-</div>
-</div>
-</div>
-</footer>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-AOS.init({
-duration: 1000,
-once: true,
-offset: 100
-});
-const pricingCards = document.querySelectorAll('.pricing-card');
-pricingCards.forEach(card => {
-card.addEventListener('click', () => {
-pricingCards.forEach(c => {
-c.classList.remove('active');
-c.classList.remove('border-primary');
-c.classList.remove('border-2');
-});
-card.classList.add('active');
-card.classList.add('border-primary');
-card.classList.add('border-2');
-card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-});
-});
-const menuToggle = document.querySelector('.ri-menu-line');
-const mobileMenu = document.querySelector('nav');
-if (menuToggle && mobileMenu) {
-menuToggle.addEventListener('click', function() {
-mobileMenu.classList.toggle('hidden');
-});
-}
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-anchor.addEventListener('click', function(e) {
-e.preventDefault();
-const targetId = this.getAttribute('href');
-if (targetId === '#') return;
-const targetElement = document.querySelector(targetId);
-if (targetElement) {
-window.scrollTo({
-top: targetElement.offsetTop - 80,
-behavior: 'smooth'
-});
-if (!mobileMenu.classList.contains('hidden')) {
-mobileMenu.classList.add('hidden');
-}
-}
-});
-});
-const contactForm = document.querySelector('form');
-if (contactForm) {
-contactForm.addEventListener('submit', function(e) {
-e.preventDefault();
-let valid = true;
-const requiredFields = contactForm.querySelectorAll('input[type="text"], input[type="email"], input[type="tel"], select, textarea');
-requiredFields.forEach(field => {
-if (!field.value.trim()) {
-field.style.borderColor = '#FF6B00';
-valid = false;
-} else {
-field.style.borderColor = '';
-}
-});
-if (valid) {
-alert('Thank you for your inquiry! We will contact you shortly.');
-contactForm.reset();
-} else {
-alert('Please fill in all required fields.');
-}
-});
-}
-const projectCards = document.querySelectorAll('.project-card');
-projectCards.forEach(card => {
-const overlay = card.querySelector('.project-overlay');
-if (overlay) {
-overlay.style.opacity = '0';
-}
-card.addEventListener('mouseenter', () => {
-if (overlay) {
-overlay.style.opacity = '1';
-}
-});
-card.addEventListener('mouseleave', () => {
-if (overlay) {
-overlay.style.opacity = '0';
-}
-});
-});
-});
-</script>
+  </section>
+  <!-- Pricing Section -->
+  <section id="pricing" class="py-20 bg-[#1A1A1A]">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Gói <span class="text-primary">Dịch vụ</span></h2>
+        <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+        <p class="text-gray-300 max-w-2xl mx-auto">Chọn gói dịch vụ phù hợp với nhu cầu xây dựng, tư vấn giám sát hoặc cung ứng vật liệu của bạn.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div class="pricing-card bg-[#2A2A2A] p-8 rounded transition-all duration-300 cursor-pointer" data-aos="fade-up" data-aos-delay="100">
+          <h3 class="text-xl font-bold mb-4">Gói Cơ bản</h3>
+          <p class="text-gray-400 mb-6">Phù hợp cho các dự án nhà ở nhỏ, cung cấp vật liệu cơ bản và giám sát tiêu chuẩn.</p>
+          <p class="text-3xl font-bold text-primary mb-6">Liên hệ để báo giá</p>
+          <ul class="text-gray-400 mb-6 space-y-2">
+            <li><i class="ri-check-line mr-2"></i>Xây dựng nhà ở (4101)</li>
+            <li><i class="ri-check-line mr-2"></i>Cung cấp vật liệu cơ bản (4663)</li>
+            <li><i class="ri-check-line mr-2"></i>Giám sát tiêu chuẩn (7110)</li>
+          </ul>
+          <a href="#contact" class="bg-primary text-white px-6 py-2 !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-all font-medium">Chọn gói</a>
+        </div>
+        <div class="pricing-card bg-[#2A2A2A] p-8 rounded transition-all duration-300 cursor-pointer border-2 border-primary" data-aos="fade-up" data-aos-delay="200">
+          <h3 class="text-xl font-bold mb-4">Gói Chuyên nghiệp</h3>
+          <p class="text-gray-400 mb-6">Dành cho dự án nhà ở và công trình công nghiệp lớn, với vật liệu cao cấp và giám sát chuyên sâu.</p>
+          <p class="text-3xl font-bold text-primary mb-6">Liên hệ để báo giá</p>
+          <ul class="text-gray-400 mb-6 space-y-2">
+            <li><i class="ri-check-line mr-2"></i>Xây dựng nhà ở & công nghiệp (4101, 4102)</li>
+            <li><i class="ri-check-line mr-2"></i>Vật liệu cao cấp (4663, 4659)</li>
+            <li><i class="ri-check-line mr-2"></i>Giám sát chuyên sâu (7110)</li>
+            <li><i class="ri-check-line mr-2"></i>Thiết kế chuyên dụng (7410)</li>
+          </ul>
+          <a href="#contact" class="bg-primary text-white px-6 py-2 !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-all font-medium">Chọn gói</a>
+        </div>
+        <div class="pricing-card bg-[#2A2A2A] p-8 rounded transition-all duration-300 cursor-pointer" data-aos="fade-up" data-aos-delay="300">
+          <h3 class="text-xl font-bold mb-4">Gói Toàn diện</h3>
+          <p class="text-gray-400 mb-6">Giải pháp toàn diện cho dự án lớn, bao gồm xây dựng, vật liệu, và giám sát toàn bộ quy trình.</p>
+          <p class="text-3xl font-bold text-primary mb-6">Liên hệ để báo giá</p>
+          <ul class="text-gray-400 mb-6 space-y-2">
+            <li><i class="ri-check-line mr-2"></i>Xây dựng nhà ở, công nghiệp, đường bộ (4101, 4102, 4212)</li>
+            <li><i class="ri-check-line mr-2"></i>Vật liệu & thiết bị cao cấp (4663, 4659, 4752)</li>
+            <li><i class="ri-check-line mr-2"></i>Giám sát toàn diện (7110)</li>
+            <li><i class="ri-check-line mr-2"></i>Hoàn thiện công trình (4330)</li>
+            <li><i class="ri-check-line mr-2"></i>Thiết kế chuyên dụng (7410)</li>
+          </ul>
+          <a href="#contact" class="bg-primary text-white px-6 py-2 !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-all font-medium">Chọn gói</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Why Choose Us Section -->
+  <section id="about" class="py-20 bg-[#1A1A1A]">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 mb-10 md:mb-0">
+          <img src="https://readdy.ai/api/search-image?query=professional%20home%20repair%20worker%20in%20uniform%20working%20on%20a%20house%20repair%2C%20dark%20background%20with%20subtle%20lighting%2C%20high%20quality%20professional%20photo%2C%20realistic%2C%20showing%20skilled%20worker%20in%20action&width=600&height=600&seq=2&orientation=squarish" alt="Công nhân xây dựng" class="rounded-lg shadow-2xl object-cover object-top w-full h-[500px]">
+        </div>
+        <div class="md:w-1/2 md:pl-12">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">Giới thiệu <span class="text-primary">CÔNG TY 379</span></h2>
+          <div class="w-20 h-1 bg-primary mb-6"></div>
+          <p class="text-gray-300 mb-8">CÔNG TY CỔ PHẦN 379 (379 JOINT STOCK COMPANY) là đơn vị uy tín tại Hưng Yên, với hơn 10 năm kinh nghiệm trong lĩnh vực xây dựng, tư vấn giám sát, và cung ứng vật liệu xây dựng. Chúng tôi cam kết mang đến các công trình chất lượng cao với đội ngũ kỹ sư chuyên nghiệp.</p>
+          <h3 class="text-xl font-bold mb-4">Ngành nghề kinh doanh chính</h3>
+          <ul class="text-gray-400 list-disc pl-5 mb-8">
+            <li>Xây dựng nhà để ở (4101)</li>
+            <li>Xây dựng nhà không để ở (4102)</li>
+            <li>Xây dựng công trình đường bộ (4212)</li>
+            <li>Hoàn thiện công trình xây dựng (4330)</li>
+            <li>Hoạt động thiết kế chuyên dụng (7410)</li>
+            <li>Bán buôn vật liệu, thiết bị xây dựng (4663)</li>
+            <li>Bán buôn thiết bị vệ sinh, điện dân dụng (4659)</li>
+            <li>Bán lẻ đồ ngũ kim, sơn, kính (4752)</li>
+            <li>Tư vấn giám sát thi công công trình (7110)</li>
+          </ul>
+          <div class="grid grid-cols-2 gap-6 mb-8">
+            <div class="flex items-start">
+              <div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4">
+                <i class="ri-shield-check-line ri-lg text-primary"></i>
+              </div>
+              <div>
+                <h3 class="font-bold mb-2">Được cấp phép</h3>
+                <p class="text-gray-400 text-sm">Đội ngũ kỹ sư được chứng nhận uy tín</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4">
+                <i class="ri-time-line ri-lg text-primary"></i>
+              </div>
+              <div>
+                <h3 class="font-bold mb-2">Đúng tiến độ</h3>
+                <p class="text-gray-400 text-sm">Cam kết hoàn thành đúng thời hạn</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4">
+                <i class="ri-price-tag-3-line ri-lg text-primary"></i>
+              </div>
+              <div>
+                <h3 class="font-bold mb-2">Giá cả minh bạch</h3>
+                <p class="text-gray-400 text-sm">Báo giá rõ ràng, không phí ẩn</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4">
+                <i class="ri-customer-service-2-line ri-lg text-primary"></i>
+              </div>
+              <div>
+                <h3 class="font-bold mb-2">Hỗ trợ 24/7</h3>
+                <p class="text-gray-400 text-sm">Dịch vụ hỗ trợ mọi lúc</p>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-8 mb-8">
+            <div class="text-center">
+              <p class="text-3xl font-bold text-primary">10+</p>
+              <p class="text-gray-400 text-sm">Năm kinh nghiệm</p>
+            </div>
+            <div class="text-center">
+              <p class="text-3xl font-bold text-primary">95%</p>
+              <p class="text-gray-400 text-sm">Tỷ lệ hài lòng</p>
+            </div>
+            <div class="text-center">
+              <p class="text-3xl font-bold text-primary">100+</p>
+              <p class="text-gray-400 text-sm">Dự án hoàn thành</p>
+            </div>
+          </div>
+          <a href="#contact" class="bg-primary text-white px-8 py-3 !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-all font-medium inline-block">Yêu cầu báo giá</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Recent Projects Section -->
+  <section id="projects" class="py-20 bg-[#222222]">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Dự án <span class="text-primary">Nổi bật</span></h2>
+        <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+        <p class="text-gray-300 max-w-2xl mx-auto">Khám phá các dự án xây dựng, cải tạo, tư vấn giám sát và cung ứng vật liệu gần đây của chúng tôi, thể hiện chất lượng vượt trội.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <div class="project-card bg-[#2A2A2A] rounded overflow-hidden relative" data-aos="zoom-in" data-aos-delay="100">
+          <img src="https://readdy.ai/api/search-image?query=modern%20kitchen%20renovation%2C%20before%20and%20after%20comparison%2C%20dark%20elegant%20design%2C%20high%20quality%20professional%20photo%2C%20realistic&width=400&height=300&seq=3&orientation=landscape" alt="Xây dựng nhà ở" class="w-full h-64 object-cover object-top">
+          <div class="project-overlay absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-end p-6">
+            <h3 class="text-xl font-bold mb-2">Xây dựng nhà ở</h3>
+            <p class="text-gray-300 mb-2">Ngôi nhà hiện đại với vật liệu cao cấp</p>
+            <p class="text-primary mb-4">Hoàn thành trong 4 tháng</p>
+            <a href="#" class="text-white flex items-center hover:text-primary transition-colors">
+              Xem chi tiết <i class="ri-arrow-right-line ml-2"></i>
+            </a>
+          </div>
+        </div>
+        <div class="project-card bg-[#2A2A2A] rounded overflow-hidden relative" data-aos="zoom-in" data-aos-delay="200">
+          <img src="https://readdy.ai/api/search-image?query=bathroom%20remodeling%2C%20before%20and%20after%20comparison%2C%20modern%20elegant%20design%20with%20dark%20accents%2C%20high%20quality%20professional%20photo%2C%20realistic&width=400&height=300&seq=4&orientation=landscape" alt="Xây dựng công trình công nghiệp" class="w-full h-64 object-cover object-top">
+          <div class="project-overlay absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-end p-6">
+            <h3 class="text-xl font-bold mb-2">Xây dựng công trình công nghiệp</h3>
+            <p class="text-gray-300 mb-2">Tòa nhà thương mại với cơ sở hạ tầng hiện đại</p>
+            <p class="text-primary mb-4">Hoàn thành trong 6 tháng</p>
+            <a href="#" class="text-white flex items-center hover:text-primary transition-colors">
+              Xem chi tiết <i class="ri-arrow-right-line ml-2"></i>
+            </a>
+          </div>
+        </div>
+        <div class="project-card bg-[#2A2A2A] rounded overflow-hidden relative" data-aos="zoom-in" data-aos-delay="300">
+          <img src="https://readdy.ai/api/search-image?query=electrical%20system%20upgrade%20in%20home%2C%20before%20and%20after%20comparison%2C%20professional%20installation%2C%20high%20quality%20professional%20photo%2C%20realistic&width=400&height=300&seq=5&orientation=landscape" alt="Xây dựng công trình đường bộ" class="w-full h-64 object-cover object-top">
+          <div class="project-overlay absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-end p-6">
+            <h3 class="text-xl font-bold mb-2">Xây dựng công trình đường bộ</h3>
+            <p class="text-gray-300 mb-2">Mở rộng đường cao tốc với vật liệu bền vững</p>
+            <p class="text-primary mb-4">Hoàn thành trong 3 tháng</p>
+            <a href="#" class="text-white flex items-center hover:text-primary transition-colors">
+              Xem chi tiết <i class="ri-arrow-right-line ml-2"></i>
+            </a>
+          </div>
+        </div>
+        <div class="project-card bg-[#2A2A2A] rounded overflow-hidden relative" data-aos="zoom-in" data-aos-delay="400">
+          <img src="https://readdy.ai/api/search-image?query=plumbing%20repair%20in%20home%2C%20before%20and%20after%20comparison%2C%20professional%20installation%20of%20new%20pipes%2C%20high%20quality%20professional%20photo%2C%20realistic&width=400&height=300&seq=6&orientation=landscape" alt="Lắp đặt thiết bị vệ sinh" class="w-full h-64 object-cover object-top">
+          <div class="project-overlay absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-end p-6">
+            <h3 class="text-xl font-bold mb-2">Lắp đặt thiết bị vệ sinh</h3>
+            <p class="text-gray-300 mb-2">Hệ thống thiết bị vệ sinh cao cấp cho nhà ở</p>
+            <p class="text-primary mb-4">Hoàn thành trong 2 tuần</p>
+            <a href="#" class="text-white flex items-center hover:text-primary transition-colors">
+              Xem chi tiết <i class="ri-arrow-right-line ml-2"></i>
+            </a>
+          </div>
+        </div>
+        <div class="project-card bg-[#2A2A2A] rounded overflow-hidden relative" data-aos="zoom-in" data-aos-delay="500">
+          <img src="https://readdy.ai/api/search-image?query=wooden%20deck%20construction%2C%20before%20and%20after%20comparison%2C%20beautiful%20outdoor%20space%2C%20high%20quality%20professional%20photo%2C%20realistic&width=400&height=300&seq=7&orientation=landscape" alt="Cung cấp vật liệu xây dựng" class="w-full h-64 object-cover object-top">
+          <div class="project-overlay absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-end p-6">
+            <h3 class="text-xl font-bold mb-2">Cung cấp vật liệu xây dựng</h3>
+            <p class="text-gray-300 mb-2">Vật liệu chất lượng cao cho các dự án lớn</p>
+            <p class="text-primary mb-4">Giao hàng trong 3 ngày</p>
+            <a href="#" class="text-white flex items-center hover:text-primary transition-colors">
+              Xem chi tiết <i class="ri-arrow-right-line ml-2"></i>
+            </a>
+          </div>
+        </div>
+        <div class="project-card bg-[#2A2A2A] rounded overflow-hidden relative" data-aos="zoom-in" data-aos-delay="600">
+          <img src="https://readdy.ai/api/search-image?query=construction%20supervision%2C%20professional%20engineer%20supervising%20construction%20site%2C%20high%20quality%20professional%20photo%2C%20realistic&width=400&height=300&seq=8&orientation=landscape" alt="Tư vấn giám sát thi công" class="w-full h-64 object-cover object-top">
+          <div class="project-overlay absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-end p-6">
+            <h3 class="text-xl font-bold mb-2">Tư vấn giám sát thi công</h3>
+            <p class="text-gray-300 mb-2">Giám sát công trình giao thông lớn, đảm bảo chất lượng</p>
+            <p class="text-primary mb-4">Hoàn thành trong 5 tháng</p>
+            <a href="#" class="text-white flex items-center hover:text-primary transition-colors">
+              Xem chi tiết <i class="ri-arrow-right-line ml-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="text-center">
+        <a href="#" class="bg-primary text-white px-8 py-3 !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-all font-medium">Xem tất cả dự án</a>
+      </div>
+    </div>
+  </section>
+  <!-- Testimonials Section -->
+  <section class="py-20 bg-[#222222]">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Ý kiến <span class="text-primary">Khách hàng</span></h2>
+        <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+        <p class="text-gray-300 max-w-2xl mx-auto">Nghe ý kiến từ khách hàng về trải nghiệm với dịch vụ xây dựng, tư vấn giám sát và cung ứng vật liệu của chúng tôi.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-[#2A2A2A] p-8 rounded relative" data-aos="fade-up" data-aos-delay="100">
+          <div class="text-primary text-4xl absolute -top-5 left-8">"</div>
+          <p class="text-gray-300 mb-6 pt-4">Đội ngũ đã hoàn thành ngôi nhà của chúng tôi đúng tiến độ với chất lượng vượt mong đợi. Vật liệu sử dụng rất bền và đẹp!</p>
+          <div class="flex items-center">
+            <div class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center mr-4">
+              <i class="ri-user-line text-white"></i>
+            </div>
+            <div>
+              <h4 class="font-bold">Nguyễn Văn A</h4>
+              <p class="text-gray-400 text-sm">Xây dựng nhà ở</p>
+            </div>
+          </div>
+          <div class="flex text-primary mt-4">
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+          </div>
+        </div>
+        <div class="bg-[#2A2A2A] p-8 rounded relative" data-aos="fade-up" data-aos-delay="200">
+          <div class="text-primary text-4xl absolute -top-5 left-8">"</div>
+          <p class="text-gray-300 mb-6 pt-4">Dịch vụ cung cấp vật liệu của công ty rất chuyên nghiệp, thiết bị vệ sinh đáp ứng đúng yêu cầu dự án của chúng tôi.</p>
+          <div class="flex items-center">
+            <div class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center mr-4">
+              <i class="ri-user-line text-white"></i>
+            </div>
+            <div>
+              <h4 class="font-bold">Trần Thị B</h4>
+              <p class="text-gray-400 text-sm">Cung cấp thiết bị vệ sinh</p>
+            </div>
+          </div>
+          <div class="flex text-primary mt-4">
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+          </div>
+        </div>
+        <div class="bg-[#2A2A2A] p-8 rounded relative" data-aos="fade-up" data-aos-delay="300">
+          <div class="text-primary text-4xl absolute -top-5 left-8">"</div>
+          <p class="text-gray-300 mb-6 pt-4">Dịch vụ tư vấn giám sát thi công đảm bảo công trình của chúng tôi đạt chất lượng cao, đúng tiến độ và tiết kiệm chi phí.</p>
+          <div class="flex items-center">
+            <div class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center mr-4">
+              <i class="ri-user-line text-white"></i>
+            </div>
+            <div>
+              <h4 class="font-bold">Lê Văn C</h4>
+              <p class="text-gray-400 text-sm">Tư vấn giám sát thi công</p>
+            </div>
+          </div>
+          <div class="flex text-primary mt-4">
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-half-fill"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- FAQs Section -->
+  <section id="faqs" class="py-20 bg-[#1A1A1A]">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Câu hỏi <span class="text-primary">Thường gặp</span></h2>
+        <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+        <p class="text-gray-300 max-w-2xl mx-auto">Tìm câu trả lời cho các thắc mắc phổ biến về dịch vụ xây dựng, tư vấn giám sát và cung ứng vật liệu của chúng tôi.</p>
+      </div>
+      <div class="max-w-3xl mx-auto space-y-4">
+        <div class="faq-item bg-[#2A2A2A] p-6 rounded" data-aos="fade-up" data-aos-delay="100">
+          <div class="flex justify-between items-center">
+            <h3 class="text-lg font-bold">Quy trình tư vấn giám sát thi công của 379 JSC như thế nào?</h3>
+            <i class="ri-arrow-down-s-line ri-lg text-primary"></i>
+          </div>
+          <div class="faq-content text-gray-400 mt-4">
+            <p>Chúng tôi cung cấp dịch vụ giám sát toàn diện, từ kiểm tra chất lượng vật liệu, tiến độ thi công, đến quản lý chi phí, đảm bảo công trình đạt tiêu chuẩn cao nhất.</p>
+          </div>
+        </div>
+        <div class="faq-item bg-[#2A2A2A] p-6 rounded" data-aos="fade-up" data-aos-delay="200">
+          <div class="flex justify-between items-center">
+            <h3 class="text-lg font-bold">Vật liệu xây dựng có đảm bảo chất lượng không?</h3>
+            <i class="ri-arrow-down-s-line ri-lg text-primary"></i>
+          </div>
+          <div class="faq-content text-gray-400 mt-4">
+            <p>Chúng tôi cung cấp vật liệu từ các nhà sản xuất uy tín, đạt tiêu chuẩn quốc gia, đảm bảo độ bền và an toàn cho mọi dự án.</p>
+          </div>
+        </div>
+        <div class="faq-item bg-[#2A2A2A] p-6 rounded" data-aos="fade-up" data-aos-delay="300">
+          <div class="flex justify-between items-center">
+            <h3 class="text-lg font-bold">Làm thế nào để yêu cầu báo giá?</h3>
+            <i class="ri-arrow-down-s-line ri-lg text-primary"></i>
+          </div>
+          <div class="faq-content text-gray-400 mt-4">
+            <p>Quý khách có thể điền form liên hệ trên trang web hoặc gọi trực tiếp qua số 0973 480 488 để nhận báo giá miễn phí trong 24 giờ.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-[#1A1A1A]">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col md:flex-row">
+        <div class="md:w-1/2 mb-12 md:mb-0" data-aos="fade-right">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">Liên hệ <span class="text-primary">Chúng tôi</span></h2>
+          <div class="w-20 h-1 bg-primary mb-6"></div>
+          <p class="text-gray-300 mb-8 max-w-lg">Liên hệ ngay hôm nay để nhận tư vấn và báo giá miễn phí cho nhu cầu xây dựng, tư vấn giám sát hoặc cung ứng vật liệu của bạn.</p>
+          <div class="space-y-6 mb-8">
+            <div class="flex items-start">
+              <div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4">
+                <i class="ri-map-pin-line text-primary"></i>
+              </div>
+              <div>
+                <h3 class="font-bold mb-1">Địa chỉ</h3>
+                <p class="text-gray-400">Tổ Dân Phố Nhân Dục, Phường Phố Hiến, Hưng Yên, Việt Nam</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4">
+                <i class="ri-phone-line text-primary"></i>
+              </div>
+              <div>
+                <h3 class="font-bold mb-1">Điện thoại</h3>
+                <p class="text-gray-400">0973 480 488</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4">
+                <i class="ri-mail-line text-primary"></i>
+              </div>
+              <div>
+                <h3 class="font-bold mb-1">Email</h3>
+                <p class="text-gray-400">company379.pro@gmail.com</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4">
+                <i class="ri-time-line text-primary"></i>
+              </div>
+              <div>
+                <h3 class="font-bold mb-1">Giờ làm việc</h3>
+                <p class="text-gray-400">Thứ Hai - Thứ Sáu: 8h-18h<br>Thứ Bảy: 9h-16h<br>Chủ Nhật: Nghỉ</p>
+              </div>
+            </div>
+          </div>
+          <div class="flex space-x-4">
+            <a href="https://facebook.com/379jsc" class="w-10 h-10 flex items-center justify-center bg-[#2A2A2A] rounded-full hover:bg-primary transition-colors">
+              <i class="ri-facebook-fill text-white"></i>
+            </a>
+            <a href="https://instagram.com/379jsc" class="w-10 h-10 flex items-center justify-center bg-[#2A2A2A] rounded-full hover:bg-primary transition-colors">
+              <i class="ri-instagram-line text-white"></i>
+            </a>
+            <a href="https://twitter.com/379jsc" class="w-10 h-10 flex items-center justify-center bg-[#2A2A2A] rounded-full hover:bg-primary transition-colors">
+              <i class="ri-twitter-x-line text-white"></i>
+            </a>
+            <a href="https://linkedin.com/company/379jsc" class="w-10 h-10 flex items-center justify-center bg-[#2A2A2A] rounded-full hover:bg-primary transition-colors">
+              <i class="ri-linkedin-fill text-white"></i>
+            </a>
+          </div>
+        </div>
+        <div class="md:w-1/2" data-aos="fade-left">
+          <div class="bg-[#2A2A2A] p-8 rounded">
+            <h3 class="text-2xl font-bold mb-6">Yêu cầu báo giá miễn phí</h3>
+            <form action="https://formspree.io/f/your-form-id" method="POST">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <label for="name" class="block text-gray-300 mb-2">Họ và tên</label>
+                  <input type="text" id="name" name="name" class="w-full bg-[#333333] border-none text-white p-3 rounded" placeholder="Nguyễn Văn A" required>
+                </div>
+                <div>
+                  <label for="email" class="block text-gray-300 mb-2">Email</label>
+                  <input type="email" id="email" name="email" class="w-full bg-[#333333] border-none text-white p-3 rounded" placeholder="example@company379.pro" required>
+                </div>
+                <div>
+                  <label for="phone" class="block text-gray-300 mb-2">Số điện thoại</label>
+                  <input type="tel" id="phone" name="phone" class="w-full bg-[#333333] border-none text-white p-3 rounded" placeholder="0973 480 488" required>
+                </div>
+                <div>
+                  <label for="service" class="block text-gray-300 mb-2">Dịch vụ cần thiết</label>
+                  <div class="relative">
+                    <select id="service" name="service" class="w-full bg-[#333333] border-none text-white p-3 rounded appearance-none pr-8" required>
+                      <option value="">Chọn dịch vụ</option>
+                      <option value="residential-construction">Xây dựng nhà ở</option>
+                      <option value="non-residential-construction">Xây dựng công trình công nghiệp</option>
+                      <option value="road-construction">Xây dựng công trình đường bộ</option>
+                      <option value="material-supply">Cung cấp vật liệu xây dựng</option>
+                      <option value="sanitary-equipment">Bán lẻ thiết bị xây dựng</option>
+                      <option value="supervision">Tư vấn giám sát thi công</option>
+                      <option value="other">Khác</option>
+                    </select>
+                    <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+                      <i class="ri-arrow-down-s-line text-gray-400"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mb-6">
+                <label for="message" class="block text-gray-300 mb-2">Chi tiết dự án</label>
+                <textarea id="message" name="message" rows="5" class="w-full bg-[#333333] border-none text-white p-3 rounded" placeholder="Vui lòng mô tả dự án hoặc yêu cầu của bạn..." required></textarea>
+              </div>
+              <div class="mb-6">
+                <label class="flex items-center">
+                  <input type="checkbox" name="terms" class="mr-3" required>
+                  <span class="text-gray-300 text-sm">Tôi đồng ý với <a href="#" class="text-primary hover:underline">điều khoản dịch vụ</a> và <a href="#" class="text-primary hover:underline">chính sách bảo mật</a>.</span>
+                </label>
+              </div>
+              <button type="submit" class="bg-primary text-white px-8 py-3 !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-all font-medium w-full">Gửi yêu cầu</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Trust Badges Section -->
+  <section class="py-12 bg-[#222222]">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+        <div class="text-center">
+          <div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mx-auto mb-2">
+            <i class="ri-shield-check-line ri-2x text-primary"></i>
+          </div>
+          <p class="text-gray-300 font-bold">Được cấp phép</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mx-auto mb-2">
+            <i class="ri-medal-line ri-2x text-primary"></i>
+          </div>
+          <p class="text-gray-300 font-bold">10+ Năm kinh nghiệm</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mx-auto mb-2">
+            <i class="ri-thumb-up-line ri-2x text-primary"></i>
+          </div>
+          <p class="text-gray-300 font-bold">95% Hài lòng</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mx-auto mb-2">
+            <i class="ri-24-hours-line ri-2x text-primary"></i>
+          </div>
+          <p class="text-gray-300 font-bold">Hỗ trợ 24/7</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mx-auto mb-2">
+            <i class="ri-wallet-3-line ri-2x text-primary"></i>
+          </div>
+          <p class="text-gray-300 font-bold">Giá cả minh bạch</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-[#1A1A1A] pt-16 pb-8">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        <div>
+          <a href="#" class="flex items-center mb-4">
+            <img src="https://via.placeholder.com/40" alt="Logo CÔNG TY 379" class="w-10 h-10 mr-2">
+            <span class="text-3xl font-['Pacifico'] text-white">CÔNG TY 379</span>
+          </a>
+          <p class="text-gray-400 mb-6">CÔNG TY CỔ PHẦN 379 - Đối tác đáng tin cậy trong lĩnh vực xây dựng, tư vấn giám sát và cung ứng vật liệu xây dựng tại Hưng Yên, Việt Nam. Mã số thuế: [Thay bằng mã số thuế thực].</p>
+          <div class="flex space-x-4">
+            <a href="https://facebook.com/379jsc" class="w-10 h-10 flex items-center justify-center bg-[#2A2A2A] rounded-full hover:bg-primary transition-colors">
+              <i class="ri-facebook-fill text-white"></i>
+            </a>
+            <a href="https://instagram.com/379jsc" class="w-10 h-10 flex items-center justify-center bg-[#2A2A2A] rounded-full hover:bg-primary transition-colors">
+              <i class="ri-instagram-line text-white"></i>
+            </a>
+            <a href="https://twitter.com/379jsc" class="w-10 h-10 flex items-center justify-center bg-[#2A2A2A] rounded-full hover:bg-primary transition-colors">
+              <i class="ri-twitter-x-line text-white"></i>
+            </a>
+            <a href="https://linkedin.com/company/379jsc" class="w-10 h-10 flex items-center justify-center bg-[#2A2A2A] rounded-full hover:bg-primary transition-colors">
+              <i class="ri-linkedin-fill text-white"></i>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-xl font-bold mb-6">Dịch vụ</h4>
+          <ul class="space-y-3">
+            <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Xây dựng nhà ở</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Xây dựng công trình công nghiệp</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Xây dựng công trình đường bộ</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Cung cấp vật liệu xây dựng</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Bán lẻ thiết bị xây dựng</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Tư vấn giám sát thi công</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-xl font-bold mb-6">Liên kết nhanh</h4>
+          <ul class="space-y-3">
+            <li><a href="#about" class="text-gray-400 hover:text-primary transition-colors">Giới thiệu</a></li>
+            <li><a href="#projects" class="text-gray-400 hover:text-primary transition-colors">Dự án</a></li>
+            <li><a href="#pricing" class="text-gray-400 hover:text-primary transition-colors">Gói dịch vụ</a></li>
+            <li><a href="#faqs" class="text-gray-400 hover:text-primary transition-colors">Câu hỏi thường gặp</a></li>
+            <li><a href="#contact" class="text-gray-400 hover:text-primary transition-colors">Liên hệ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-xl font-bold mb-6">Thông tin liên hệ</h4>
+          <ul class="space-y-4">
+            <li class="flex items-start">
+              <div class="w-10 h-10 flex items-center justify-center bg-[#2A2A2A] rounded-full mr-3">
+                <i class="ri-map-pin-line text-primary"></i>
+              </div>
+              <span class="text-gray-400">Tổ Dân Phố Nhân Dục, Phường Phố Hiến, Hưng Yên, Việt Nam</span>
+            </li>
+            <li class="flex items-start">
+              <div class="w-10 h-10 flex items-center justify-center bg-[#2A2A2A] rounded-full mr-3">
+                <i class="ri-phone-line text-primary"></i>
+              </div>
+              <span class="text-gray-400">0973 480 488</span>
+            </li>
+            <li class="flex items-start">
+              <div class="w-10 h-10 flex items-center justify-center bg-[#2A2A2A] rounded-full mr-3">
+                <i class="ri-mail-line text-primary"></i>
+              </div>
+              <span class="text-gray-400">company379.pro@gmail.com</span>
+            </li>
+            <li class="flex items-start">
+              <div class="w-10 h-10 flex items-center justify-center bg-[#2A2A2A] rounded-full mr-3">
+                <i class="ri-time-line text-primary"></i>
+              </div>
+              <span class="text-gray-400">Thứ Hai - Thứ Sáu: 8h-18h<br>Thứ Bảy: 9h-16h</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 pt-8">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <p class="text-gray-500 mb-4 md:mb-0">© 2025 CÔNG TY CỔ PHẦN 379. Mọi quyền được bảo lưu. Mã số thuế: [Thay bằng mã số thuế thực].</p>
+          <div class="flex space-x-6">
+            <a href="#" class="text-gray-500 hover:text-primary transition-colors">Chính sách bảo mật</a>
+            <a href="#" class="text-gray-500 hover:text-primary transition-colors">Điều khoản dịch vụ</a>
+            <a href="#" class="text-gray-500 hover:text-primary transition-colors">Chính sách cookie</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100
+      });
+      // Mobile menu toggle
+      const menuToggle = document.querySelector('.ri-menu-line');
+      const mobileMenu = document.querySelector('nav');
+      if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener('click', function() {
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+      // Smooth scroll
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 80,
+              behavior: 'smooth'
+            });
+            if (!mobileMenu.classList.contains('hidden')) {
+              mobileMenu.classList.add('hidden');
+            }
+          }
+        });
+      });
+      // Form submission
+      const contactForm = document.querySelector('form');
+      if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+          const requiredFields = contactForm.querySelectorAll('[required]');
+          let valid = true;
+          requiredFields.forEach(field => {
+            if (!field.value.trim()) {
+              field.style.borderColor = '#FF6B00';
+              valid = false;
+            } else {
+              field.style.borderColor = '';
+            }
+          });
+          if (!valid) {
+            e.preventDefault();
+            alert('Vui lòng điền đầy đủ các trường bắt buộc.');
+          }
+        });
+      }
+      // Project card hover
+      const projectCards = document.querySelectorAll('.project-card');
+      projectCards.forEach(card => {
+        const overlay = card.querySelector('.project-overlay');
+        if (overlay) {
+          overlay.style.opacity = '0';
+        }
+        card.addEventListener('mouseenter', () => {
+          if (overlay) {
+            overlay.style.opacity = '1';
+          }
+        });
+        card.addEventListener('mouseleave', () => {
+          if (overlay) {
+            overlay.style.opacity = '0';
+          }
+        });
+      });
+      // Pricing card interaction
+      const pricingCards = document.querySelectorAll('.pricing-card');
+      pricingCards.forEach(card => {
+        card.addEventListener('click', () => {
+          pricingCards.forEach(c => {
+            c.classList.remove('active');
+            c.classList.remove('border-primary');
+            c.classList.remove('border-2');
+          });
+          card.classList.add('active');
+          card.classList.add('border-primary');
+          card.classList.add('border-2');
+          card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        });
+      });
+      // FAQ accordion
+      const faqItems = document.querySelectorAll('.faq-item');
+      faqItems.forEach(item => {
+        item.addEventListener('click', () => {
+          const isActive = item.classList.contains('active');
+          faqItems.forEach(i => {
+            i.classList.remove('active');
+            i.querySelector('.faq-content').style.maxHeight = '0';
+          });
+          if (!isActive) {
+            item.classList.add('active');
+            item.querySelector('.faq-content').style.maxHeight = '200px';
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
