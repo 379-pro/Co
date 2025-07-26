@@ -69,6 +69,38 @@
     .hero-content {
   padding-top: 70px; /* Đẩy nội dung xuống 7cm */
 }
+.hero-content {
+  padding-top: 40px; /* Đẩy nội dung xuống thêm để tránh mất chữ */
+}
+.hero-content h1 {
+  margin-bottom: 16px; /* Giảm từ 32px (mb-8) xuống 16px */
+}
+.hero-content .w-24.h-1.bg-primary {
+  margin-bottom: 16px; /* Giảm từ 32px (mb-8) xuống 16px */
+}
+.hero-content p {
+  margin-bottom: 16px; /* Giảm từ 40px (mb-10) xuống 16px */
+}
+.hero-content .flex-wrap.gap-12 {
+  margin-bottom: 16px; /* Giảm từ 48px (mb-12) xuống 16px */
+}
+.hero-content .flex-wrap.gap-4 {
+  margin-bottom: 0; /* Xóa margin-bottom cho nút để sát cạnh */
+}
+@media (max-width: 768px) {
+  .hero-content {
+    padding-top: 20px; /* Giảm trên điện thoại */
+  }
+  .hero-content h1 {
+    margin-bottom: 12px;
+  }
+  .hero-content p {
+    margin-bottom: 12px;
+  }
+  .hero-content .flex-wrap.gap-12 {
+    margin-bottom: 12px;
+  }
+}    
  header .flex.items-center img {
   width: 120px; /* Tăng gấp 3 lần 40px */
   height: 120px;
@@ -76,8 +108,8 @@
 }
 @media (max-width: 768px) {
   header .flex.items-center img {
-    width: 60px; /* Giảm xuống còn 60px trên điện thoại */
-    height: 60px;
+    width: 120px; /* Giảm xuống còn 60px trên điện thoại */
+    height: 120px;
   }
 }
 @media (max-width: 768px) {
